@@ -1,26 +1,20 @@
 import 'dart:io';
 
-import 'package:agenda_do_pedrinho/contato_model.dart';
-import 'package:agenda_do_pedrinho/adicionar_contato.dart';
+import 'package:agenda_do_pedrinho/contato/adicionar_contato.dart';
+import 'package:agenda_do_pedrinho/contato/contato_model.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-void main() {
-  runApp(MaterialApp(
-    title: 'Agenda do Pedrinho',
-    home: HomePage(),
-    debugShowCheckedModeBanner: false,
-  ));
-}
+
 
 enum OpcoesDeOrdem { ordemAZ, ordemZA }
 
-class HomePage extends StatefulWidget {
+class AgendaHomePage extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _AgendaHomePageState createState() => _AgendaHomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _AgendaHomePageState extends State<AgendaHomePage> {
   ContactHelper helper = ContactHelper();
 
   List<Contato> contatos = List();
